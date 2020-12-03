@@ -13,8 +13,16 @@ import Produto from './Produto';
 // Mostre a mensagem carregando... enquanto o fetch é realizado
 
 const App = () => {
+  const [dados, setDados] = React.useState(null);
+  function handleClick(event) {
+    console.log(event.target.innerText);
+  }
+
   return (
     <section>
+      <button onClick={handleClick}>notebook</button>
+      <button onClick={handleClick}>smartphone</button>
+      <button onClick={handleClick}>smartphone</button>
       <Produto />
     </section>
   );
