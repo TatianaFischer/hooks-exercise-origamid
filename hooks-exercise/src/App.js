@@ -19,7 +19,9 @@ const App = () => {
     const response = await fetch(
       `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`,
     );
-    console.log(response);
+
+    const json = await response.json();
+    console.log(json);
   }
 
   return (
