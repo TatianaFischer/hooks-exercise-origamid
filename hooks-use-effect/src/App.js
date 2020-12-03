@@ -27,6 +27,12 @@ const App = () => {
 
   return (
     <section>
+      {dados && (
+        <div>
+          <h1>{dados.nome}</h1>
+          <p>R$ {dados.preco * contar}</p>
+        </div>
+      )}
       <button onClick={() => setContar(contar + 1)}>{contar}</button>
     </section>
   );
