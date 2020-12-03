@@ -5,11 +5,11 @@
 de cada produto (nome, preço e imagem)</p>
 <p> Além disso possui a mensagem de "Carregando.." quando clica no botão de abrir. </p>
 
-## Ferramentas:
-React.JS 
-useEffect
-Fetch()
-Async/Await
+## Ferramentas e Aprendizados:
+<li>React.JS </li>
+<li>useEffect</li>
+<li>Fetch()</li>
+<li>Async/Await</li>
 
 
 ## Dicas Professor
