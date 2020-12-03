@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import Modal from './components/Modal';
 
 const App = () => {
   const [contar, setContar] = React.useState(0);
   const [dados, setDados] = React.useState(null);
+  const [ativo, setAtivo] = React.useState(false);
 
   //useEffect com array de dependências vazio:
   React.useEffect(() => {
@@ -34,6 +36,8 @@ const App = () => {
         </div>
       )}
       <button onClick={() => setContar(contar + 1)}>{contar}</button>
+      <button onClick={() => setAtivo(!ativo)}>Comprar</button>
+      {ativo && <Modal />}
     </section>
   );
 };
