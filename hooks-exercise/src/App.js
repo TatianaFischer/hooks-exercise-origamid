@@ -14,15 +14,19 @@ import Produto from './Produto';
 
 const App = () => {
   const [dados, setDados] = React.useState(null);
-  function handleClick(event) {
-    console.log(event.target.innerText);
+  //
+  async function handleClick(event) {
+    const response = await fetch(
+      `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`,
+    );
+    console.log(response);
   }
 
   return (
     <section>
       <button onClick={handleClick}>notebook</button>
       <button onClick={handleClick}>smartphone</button>
-      <button onClick={handleClick}>smartphone</button>
+      <button onClick={handleClick}>tablet</button>
       <Produto />
     </section>
   );
