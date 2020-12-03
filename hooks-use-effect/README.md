@@ -33,10 +33,6 @@ esse estado fosse alterado, a função do useEffect() iria ser executada mais um
 ## Dicas Professor
 
 <li> Dica 1: </li>
+<p>O useEffect será especialmente utilizado quando precisamos definir um efeito que deve ocorrer uma vez apenas, como o fetch de dados no servidor por exemplo. <p>
 
-````
 
-````
-
-<p>
-</p>
