@@ -21,7 +21,7 @@ const App = () => {
     );
 
     const json = await response.json();
-    console.log(json);
+    setDados(json);
   }
 
   return (
@@ -29,7 +29,7 @@ const App = () => {
       <button onClick={handleClick}>notebook</button>
       <button onClick={handleClick}>smartphone</button>
       <button onClick={handleClick}>tablet</button>
-      <Produto />
+      {dados && <Produto dados={dados} />}
     </section>
   );
 };
