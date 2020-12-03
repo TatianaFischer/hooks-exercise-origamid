@@ -7,7 +7,7 @@ de cada produto (nome, preço e imagem)</p>
 
 ## Ferramentas e Aprendizados:
 <li>React.JS </li>
-<li>useEffect</li>
+<li>useState</li>
 <li>Fetch()</li>
 <li>Async/Await</li>
 
