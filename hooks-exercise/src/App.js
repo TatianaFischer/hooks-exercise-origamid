@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Produto from './Produto';
+
 //exercise - useState:
 // Os links abaixo puxam dados de um produto em formato JSON
 // https://ranekapi.origamid.dev/json/api/produto/tablet
@@ -13,9 +15,7 @@ import './App.css';
 const App = () => {
   return (
     <section>
-      <button>tablet</button>
-      <button>smartphone</button>
-      <button>notebook</button>
+      <Produto />
     </section>
   );
 };
