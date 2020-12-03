@@ -1,3 +1,17 @@
+
+## Descrição:
+<p> Aplicativo React elaborado no curso do Origamid React Completo </p>
+<p> O aplicativo possui 3 botões com nomes de produtos, quando clicados aparece as informações
+de cada produto (nome, preço e imagem)</p>
+<p> Além disso possui a mensagem de "Carregando.." quando clica no botão de abrir. </p>
+
+## Ferramentas:
+React.JS 
+useEffect
+Fetch()
+Async/Await
+
+
 <h4>Dicas Professor</h4>
 
 <li> Dica 1: </li>
