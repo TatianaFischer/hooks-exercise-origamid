@@ -8,6 +8,11 @@ const App = () => {
     if (produto !== null) window.localStorage.setItem('produto', produto);
   }, [produto]);
 
+  React.useEffect(() => {
+    const produtoArmazenado = window.localStorage.getItem('produto');
+    if (produtoArmazenado !== null) setProduto(produtoArmazenado);
+  }, []);
+
   function handleClick({ target }) {
     setProduto(target.innerText);
   }
