@@ -11,7 +11,7 @@
 ## Ferramentas e Aprendizados:
 <li>React.JS </li>
 <li>useEffect</li>
-<li></li>
+<li>Local Storage</li>
 <li></li>
 
 ## Explicações importantes:
