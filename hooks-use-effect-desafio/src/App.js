@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
-import Modal from './components/Modal';
 
 const App = () => {
-  return <section></section>;
+  const [produto, setProduto] = React.useState(null);
+  return (
+    <section>
+      <button>notebook</button>
+      <button>smartphone</button>
+    </section>
+  );
 };
 
 export default App;
