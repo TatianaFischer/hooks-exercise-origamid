@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Produto from './components/Produto';
 
 const App = () => {
   const [produto, setProduto] = React.useState(null);
@@ -22,6 +23,7 @@ const App = () => {
       <h1>Preferência: {produto}</h1>
       <button onClick={handleClick}>notebook</button>
       <button onClick={handleClick}>smartphone</button>
+      <Produto produto={produto} />
     </section>
   );
 };
