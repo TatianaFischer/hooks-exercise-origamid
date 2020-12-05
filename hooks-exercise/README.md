@@ -25,3 +25,6 @@ const [dados, setDados] = React.useState(null)
 no início e sim escrever React. antes do useState.
 Dessa maneira facilida a manutenção do código e evita esquecimento de importações; 
 </p>
+
+## Imagem do professor:
+<img src="./image-app.png"/>
