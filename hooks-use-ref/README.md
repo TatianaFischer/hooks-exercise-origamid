@@ -12,6 +12,9 @@
 
 ## Imagem do app:
 
+<img src="./img.png"
+
+
 
 
 
