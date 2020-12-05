@@ -1,7 +1,8 @@
 # React Completo Origamid - Módulo React Hooks - <i>useContext 1</i>
 ## Descrição:
-<p>createContext
-O contexto irá permitir passarmos dados/estado a todos os componentes, sem a necessidade de utilizar propriedades. Serve principalmente para dodos/estados globais como por exemplo dados do usuário logado.</p>
+
+
+<p>A aplicação dá dois exemplos de como usar o useContext, um deles é colocando o estado global e utilizando esse estado no componente Produto e outro é colocando uma função com acesso global e passando para o componente produto, que vai utilizar através do global.</p>
 
 
 ## Ferramentas e Aprendizados:

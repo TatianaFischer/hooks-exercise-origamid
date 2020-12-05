@@ -5,8 +5,14 @@ export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [contar, setContar] = React.useState(0);
+
+  function adicionarDois() {
+    setContar((contar) => contar + 2);
+  }
   return (
-    <GlobalContext.Provider value={{ contar: contar, setContar: setContar }}>
+    <GlobalContext.Provider
+      value={{ contar: contar, setContar: setContar, adicionarDois }}
+    >
       {children}
     </GlobalContext.Provider>
   );

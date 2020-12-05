@@ -11,7 +11,8 @@ const Produto = () => {
   return (
     <div>
       Produto: {global.contar}
-      <button onClick={handleClick}>Adicionar</button>
+      <button onClick={handleClick}>Adicionar 1</button>
+      <button onClick={() => global.adicionarDois()}>Adicionar 2</button>
     </div>
   );
 };
