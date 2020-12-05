@@ -18,8 +18,9 @@
 
 
 
-## Dicas Professor
+## Imagem do app:
 
-<li> Dica 1: </li>
+<img src="./enunciado-exercicio.png"/>
+
 
 
