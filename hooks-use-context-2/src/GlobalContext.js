@@ -4,15 +4,15 @@ export const GlobalContext = React.createContext();
 //chamar na parte mais global do aplicativo;
 
 export const GlobalStorage = ({ children }) => {
-  const [contar, setContar] = React.useState(0);
+  const [dados, setDados] = React.useState(null);
 
-  function adicionarDois() {
-    setContar((contar) => contar + 2);
-  }
+  React.useEffect(() => {
+    fetch('https://ranekapi.origamid.dev/json/api/produto/')
+      .then((response) => response.json())
+      .then((json) => setDados(json));
+  }, []);
   return (
-    <GlobalContext.Provider
-      value={{ contar: contar, setContar: setContar, adicionarDois }}
-    >
+    <GlobalContext.Provider value={{ dados }}>
       {children}
     </GlobalContext.Provider>
   );
