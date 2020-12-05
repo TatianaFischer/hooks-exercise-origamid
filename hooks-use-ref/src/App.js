@@ -8,6 +8,7 @@ const App = () => {
 
   const handleClick = () => {
     setComentarios([...comentarios, input]);
+    setInput('');
   };
   return (
     <section>
