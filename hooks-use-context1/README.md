@@ -2,7 +2,7 @@
 ## Descrição:
 
 
-<p>A aplicação dá dois exemplos de como usar o useContext, um deles é colocando o estado global e utilizando esse estado no componente Produto e outro é colocando uma função com acesso global e passando para o componente produto, que vai utilizar através do global.</p>
+<p>A aplicação dá dois exemplos de como usar o useContext, um deles é colocando o estado global e utilizando esse estado no componente Produto e outro é colocando uma função com acesso global e passando para o componente produto, que vai utilizar através do global. O ideal é deixar toda a lógica dentro do global context, para não precisar mudar um por vez</p>
 
 
 ## Ferramentas e Aprendizados:
