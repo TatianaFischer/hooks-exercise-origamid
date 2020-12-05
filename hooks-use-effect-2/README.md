@@ -5,6 +5,8 @@ Podemos utilizar também para guardarmos a referência de qualquer valor, como d
 </p>
 <p> Carrinho de um e-commerce que toda vez que adiciona um item no carrinho é dada uma notificação dizendo que o item foi adicionado ao carrinho</p>
 
+<p>Matéria bem difícil de entender!!</p>
+
 
 ## Ferramentas e Aprendizados:
 <li>React.JS </li>
