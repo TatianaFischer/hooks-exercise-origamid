@@ -3,6 +3,7 @@
 <p> Segundo exemplo de como usar useRef: 
 Podemos utilizar também para guardarmos a referência de qualquer valor, como de um setTimeout por exemplo.
 </p>
+<p> Carrinho de um e-commerce que toda vez que adiciona um item no carrinho é dada uma notificação dizendo que o item foi adicionado ao carrinho</p>
 
 
 ## Ferramentas e Aprendizados:
