@@ -3,12 +3,14 @@ import './App.css';
 
 const App = () => {
   const [comentarios, setComentarios] = React.useState([]);
-
   const [input, setInput] = React.useState('');
+  const inputElement = React.useRef();
 
   const handleClick = () => {
     setComentarios([...comentarios, input]);
     setInput('');
+    //para dar foco ao input e não ao botão mesmo depois de clicar em enviar:
+    inputElement.current.focus();
   };
   return (
     <section>
@@ -19,6 +21,7 @@ const App = () => {
       </ul>
       <input
         type="text"
+        ref={inputElement}
         value={input}
         onChange={({ target }) => setInput(target.value)}
       />
