@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import UserContext from './UserContext';
+import Produto from './Produto';
+import { GlobalStorage } from './GlobalContext';
 
 const App = () => {
   return (
-    <UserContext.Provider>
-      <section>teste</section>;
-    </UserContext.Provider>
+    <GlobalStorage>
+      <Produto />
+    </GlobalStorage>
   );
 };
 
