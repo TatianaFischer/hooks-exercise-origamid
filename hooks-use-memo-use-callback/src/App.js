@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 const App = () => {
-  return <section></section>;
+  return <section>teste</section>;
 };
 
 export default App;
