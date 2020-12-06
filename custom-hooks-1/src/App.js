@@ -11,9 +11,11 @@ const App = () => {
 
   return (
     <section>
-      <p>Produto preferido:</p>
+      <p>Qual você prefere?</p>
       <button onClick={handleClick}>Notebook</button>
       <button onClick={handleClick}>Smartphone</button>
+
+      <p>Você escolheu: {product}</p>
     </section>
   );
 };
