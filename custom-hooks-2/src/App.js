@@ -8,16 +8,20 @@ const App = () => {
 
   const { request, data } = useFetch();
 
-  function handleClick({ target }) {
-    setProduct(target.innerText);
-  }
-
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
     request('https://ranekapi.origamid.dev/json/api/produto/');
   }, []);
+
   console.log(data);
 
+  function handleClick({ target }) {
+    setProduct(target.innerText);
+  }
+
+  //fazer a verificação se data for null, retornar null:
+
+  if (data === null) return null;
   return (
     <section>
       <p>Qual você prefere?</p>
@@ -25,6 +29,12 @@ const App = () => {
       <button onClick={handleClick}>Smartphone</button>
 
       <p>Você escolheu: {product}</p>
+
+      {data.map((produto) => (
+        <section key={produto.id}>
+          <h1>{produto.nome}</h1>
+        </section>
+      ))}
     </section>
   );
 };

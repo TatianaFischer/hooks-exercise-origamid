@@ -6,9 +6,16 @@ const useFetch = () => {
   const [loading, setLoading] = React.useState(null);
 
   async function request(url, options) {
+    //momento em que vai aparece o carregando:
+    setLoading(true);
+
+    //tratamento dos dados:
     const response = await fetch(url, options); //pega a resposta da requisição
     const json = await response.json(); //transforma em json os dados do request
     setData(json); //altera o estado data com os dados em json
+
+    //momento em que vai desaparecer o carregando:
+    setLoading(false);
   }
 
   return { data, error, loading, request };
