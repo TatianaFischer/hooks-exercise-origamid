@@ -5,9 +5,13 @@ const useFetch = () => {
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(null);
 
-  const request = React.useCallback(async (url, options) => {}, []);
+  async function request(url, options) {
+    const response = await fetch(url, options); //pega a resposta da requisição
+    const json = await response.json(); //transforma em json os dados do request
+    setData(json); //altera o estado data com os dados em json
+  }
 
-  return { data, loading, error, request };
+  return { data, error, loading };
   //não foi retornado como array pq se não sempre tem que desestruturar  na ordem correta
   //retornando como objeto eu não precisa, da pra puxar somente o que quiser usar.
 };
