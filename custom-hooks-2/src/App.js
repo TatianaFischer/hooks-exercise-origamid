@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
+import useFetch from './hooks/useFetch';
 
 const App = () => {
   const [product, setProduct] = useLocalStorage('produto', '');
+
+  const { request, data } = useFetch();
 
   function handleClick({ target }) {
     setProduct(target.innerText);

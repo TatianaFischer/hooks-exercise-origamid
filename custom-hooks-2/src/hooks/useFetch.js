@@ -11,7 +11,7 @@ const useFetch = () => {
     setData(json); //altera o estado data com os dados em json
   }
 
-  return { data, error, loading };
+  return { data, error, loading, request };
   //não foi retornado como array pq se não sempre tem que desestruturar  na ordem correta
   //retornando como objeto eu não precisa, da pra puxar somente o que quiser usar.
 };
