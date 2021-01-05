@@ -18,25 +18,28 @@ const App = () => {
   function handleClick({ target }) {
     setProduct(target.innerText);
   }
+  //fazer verificação do loading:
+  if (loading) return <p>Carregando...</p>;
 
   //fazer a verificação se data for null, retornar null:
 
-  if (data === null) return null;
-  return (
-    <section>
-      <p>Qual você prefere?</p>
-      <button onClick={handleClick}>Notebook</button>
-      <button onClick={handleClick}>Smartphone</button>
+  if (data)
+    return (
+      <section>
+        <p>Qual você prefere?</p>
+        <button onClick={handleClick}>Notebook</button>
+        <button onClick={handleClick}>Smartphone</button>
 
-      <p>Você escolheu: {product}</p>
+        <p>Você escolheu: {product}</p>
 
-      {data.map((produto) => (
-        <section key={produto.id}>
-          <h1>{produto.nome}</h1>
-        </section>
-      ))}
-    </section>
-  );
+        {data.map((produto) => (
+          <section key={produto.id}>
+            <h1>{produto.nome}</h1>
+          </section>
+        ))}
+      </section>
+    );
+  else return null;
 };
 
 export default App;
