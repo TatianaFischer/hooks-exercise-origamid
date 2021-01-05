@@ -11,6 +11,7 @@ const App = () => {
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
     request('https://ranekapi.origamid.dev/json/api/produto/');
+    //para visualizar o "carregando..." e o erro colocar um url inexistente aqui!
   }, []);
 
   console.log(data);

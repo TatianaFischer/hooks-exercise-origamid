@@ -6,16 +6,25 @@ const useFetch = () => {
   const [loading, setLoading] = React.useState(null);
 
   async function request(url, options) {
-    //momento em que vai aparece o carregando:
-    setLoading(true);
+    //para lidar com o erro se usa o try catch:
 
-    //tratamento dos dados:
-    const response = await fetch(url, options); //pega a resposta da requisição
-    const json = await response.json(); //transforma em json os dados do request
-    setData(json); //altera o estado data com os dados em json
+    try {
+      //momento em que vai aparece o carregando:
+      setLoading(true);
 
-    //momento em que vai desaparecer o carregando:
-    setLoading(false);
+      //tratamento dos dados:
+      const response = await fetch(url, options); //pega a resposta da requisição
+      const json = await response.json(); //transforma em json os dados do request
+      setData(json); //altera o estado data com os dados em json
+
+      //momento em que vai desaparecer o carregando:
+      setLoading(false);
+    } catch (error) {
+      setError('erro');
+    } finally {
+      //o código dentro do finally sempre vai ocorrer, independete se ocorrer erro ou não
+      setLoading(false);
+    }
   }
 
   return { data, error, loading, request };
