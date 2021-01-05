@@ -6,7 +6,7 @@ import useFetch from './hooks/useFetch';
 const App = () => {
   const [product, setProduct] = useLocalStorage('produto', '');
 
-  const { request, data, loading } = useFetch();
+  const { request, data, loading, error } = useFetch();
 
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
@@ -19,6 +19,10 @@ const App = () => {
   function handleClick({ target }) {
     setProduct(target.innerText);
   }
+
+  //fazer a verificação do erro:
+  if (error) return <p>{error}</p>;
+
   //fazer verificação do loading:
   if (loading) return <p>Carregando...</p>;
 

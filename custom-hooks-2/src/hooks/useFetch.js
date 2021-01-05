@@ -20,7 +20,7 @@ const useFetch = () => {
       //momento em que vai desaparecer o carregando:
       setLoading(false);
     } catch (error) {
-      setError('erro');
+      setError('Falha ao carregar a página!');
     } finally {
       //o código dentro do finally sempre vai ocorrer, independete se ocorrer erro ou não
       setLoading(false);
