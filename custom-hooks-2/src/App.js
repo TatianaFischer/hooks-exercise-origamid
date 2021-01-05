@@ -12,6 +12,11 @@ const App = () => {
     setProduct(target.innerText);
   }
 
+  //Fazer o request assim que o componente carregar:
+  React.useEffect(() => {
+    request('https://ranekapi.origamid.dev/json/api/produto/notebook');
+  }, []);
+
   return (
     <section>
       <p>Qual você prefere?</p>
