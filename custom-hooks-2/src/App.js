@@ -19,7 +19,9 @@ const App = () => {
     }
     //para visualizar o "carregando..." e o erro colocar um url inexistente aqui em cima!
     fetchData();
-  }, []);
+  }, [request]);
+  //em cima: para não aparecer o erro embaixo dos colchetes o request tem que ser passado como dependência [request], porém assim vai entrar em um loop infinito pois vai ficar atualiazndo sempre que o request for atualizado. pata não acontecer isso a gente pode usar o useCallback lá no useFetch, para o request ser criado uma única vez.
+  // const request = React.useCallback(async (url, options)...
 
   console.log(data);
 

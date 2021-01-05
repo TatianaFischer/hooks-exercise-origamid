@@ -5,7 +5,7 @@ const useFetch = () => {
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(null);
 
-  async function request(url, options) {
+  const request = React.useCallback(async (url, options) => {
     //para pode acessar o que tem no response e no json:
     let response;
     let json;
@@ -34,7 +34,7 @@ const useFetch = () => {
       //colocar o response e o json aqui para poder se acessado no App, se nao colocar aqui, eles poderão ser acessado somente pelo data.
       return { response, json };
     }
-  }
+  }, []);
 
   return { data, error, loading, request };
   //não foi retornado como array pq se não sempre tem que desestruturar  na ordem correta
