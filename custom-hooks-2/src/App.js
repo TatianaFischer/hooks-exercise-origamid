@@ -6,7 +6,7 @@ import useFetch from './hooks/useFetch';
 const App = () => {
   const [product, setProduct] = useLocalStorage('produto', '');
 
-  const { request, data } = useFetch();
+  const { request, data, loading } = useFetch();
 
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
