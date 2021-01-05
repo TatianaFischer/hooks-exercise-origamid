@@ -10,8 +10,15 @@ const App = () => {
 
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
-    request('https://ranekapi.origamid.dev/json/api/produto/');
-    //para visualizar o "carregando..." e o erro colocar um url inexistente aqui!
+    async function fetchData() {
+      const { response, json } = await request(
+        'https://ranekapi.origamid.dev/json/api/produto/',
+      );
+      console.log(response);
+      //dessa forma, colocando o response o json sendo retornado lá no useFetch, traz possibilidade de usar o reponso e o json em muito lugares, como por exemplo nesse console.
+    }
+    //para visualizar o "carregando..." e o erro colocar um url inexistente aqui em cima!
+    fetchData();
   }, []);
 
   console.log(data);

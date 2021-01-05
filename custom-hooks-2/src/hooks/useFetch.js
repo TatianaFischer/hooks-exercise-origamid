@@ -6,15 +6,20 @@ const useFetch = () => {
   const [loading, setLoading] = React.useState(null);
 
   async function request(url, options) {
+    //para pode acessar o que tem no response e no json:
+    let response;
+    let json;
     //para lidar com o erro se usa o try catch:
 
     try {
+      //sempre que carregar a página desaparecer a mensagem de erro:
+      setError(null);
       //momento em que vai aparece o carregando:
       setLoading(true);
 
       //tratamento dos dados:
-      const response = await fetch(url, options); //pega a resposta da requisição
-      const json = await response.json(); //transforma em json os dados do request
+      response = await fetch(url, options); //pega a resposta da requisição
+      json = await response.json(); //transforma em json os dados do request
       setData(json); //altera o estado data com os dados em json
 
       //momento em que vai desaparecer o carregando:
@@ -24,6 +29,9 @@ const useFetch = () => {
     } finally {
       //o código dentro do finally sempre vai ocorrer, independete se ocorrer erro ou não
       setLoading(false);
+
+      //colocar o response e o json aqui para poder se acessado no App, se nao colocar aqui, eles poderão ser acessado somente pelo data.
+      return { response, json };
     }
   }
 
