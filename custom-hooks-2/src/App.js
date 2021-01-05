@@ -14,8 +14,9 @@ const App = () => {
 
   //Fazer o request assim que o componente carregar:
   React.useEffect(() => {
-    request('https://ranekapi.origamid.dev/json/api/produto/notebook');
+    request('https://ranekapi.origamid.dev/json/api/produto/');
   }, []);
+  console.log(data);
 
   return (
     <section>
