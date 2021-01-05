@@ -20,14 +20,15 @@ const useFetch = () => {
       //tratamento dos dados:
       response = await fetch(url, options); //pega a resposta da requisição
       json = await response.json(); //transforma em json os dados do request
-      setData(json); //altera o estado data com os dados em json
 
       //momento em que vai desaparecer o carregando:
       setLoading(false);
     } catch (error) {
+      json = null;
       setError('Falha ao carregar a página!');
     } finally {
       //o código dentro do finally sempre vai ocorrer, independete se ocorrer erro ou não
+      setData(json); //altera o estado data com os dados em json
       setLoading(false);
 
       //colocar o response e o json aqui para poder se acessado no App, se nao colocar aqui, eles poderão ser acessado somente pelo data.
