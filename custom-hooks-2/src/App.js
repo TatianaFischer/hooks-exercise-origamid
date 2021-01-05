@@ -14,7 +14,7 @@ const App = () => {
       const { response, json } = await request(
         'https://ranekapi.origamid.dev/json/api/produto/',
       );
-      console.log(response);
+      console.log(response, json);
       //dessa forma, colocando o response o json sendo retornado lá no useFetch, traz possibilidade de usar o reponso e o json em muito lugares, como por exemplo nesse console.
     }
     //para visualizar o "carregando..." e o erro colocar um url inexistente aqui em cima!
