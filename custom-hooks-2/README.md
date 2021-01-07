@@ -4,6 +4,7 @@
 <p>Ele será composto por: </p>
  <p>um estado para todas as informações (ex. data), um estado para os erros (ex. error), um estado para o que for carregar (ex.: loading) e uma função para pode fazer o request </p>
 
+
 ```
 const useLocalStorage = (key, inicial) => {
   const [state, setState] = React.useState(() => {

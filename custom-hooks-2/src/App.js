@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useFetch from './hooks/useFetch';
-
+//não está em ordem de explicação.
 const App = () => {
   const [product, setProduct] = useLocalStorage('produto', '');
 
